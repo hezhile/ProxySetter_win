@@ -32,7 +32,7 @@ def read_file(target):
 		messagebox.showinfo(message='找不到配置文件，使用默认配置', icon="warning")
 		set_proxy('172.16.217.240', '3128', 1)
 		with open(cfg_file_name,'w') as file_handle:
-			default_proxy={"1": ["内网代理", "172.16.217.240", "3128", 1]}
+			default_proxy={"1": ["Proxy 1", "172.16.217.240", "3128", 1],"2": ["No proxy", "", "", 0]}
 			json.dump(default_proxy,file_handle)
 		return default_proxy
 	else:
@@ -116,8 +116,8 @@ lframe2_id=ttk.Label(text='可用设置',font=appFont)
 lframe2 = ttk.Labelframe(mainframe, labelwidget=lframe2_id, padding="3 3 3 3",labelanchor='n')
 lframe2.grid(row=3,columnspan=2)
 
-##button_ck=ttk.Checkbutton(lframe1, text="启用")
-##button_ck.grid(column=0, row=3)
+#button_ck=ttk.Checkbutton(lframe1, text="启用")
+#button_ck.grid(column=1, row=4)
 
 proxy_addr = StringVar()
 proxy_bit = StringVar()
