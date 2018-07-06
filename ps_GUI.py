@@ -32,7 +32,7 @@ def read_file(target):
 		messagebox.showinfo(message='找不到配置文件，使用默认配置', icon="warning")
 		set_proxy('172.16.217.240', '3128', 1)
 		with open(cfg_file_name,'w') as file_handle:
-			default_proxy={"1": ["内网代理", "172.16.216.240", "3128", 1]}
+			default_proxy={"1": ["内网代理", "172.16.217.240", "3128", 1]}
 			json.dump(default_proxy,file_handle)
 		return default_proxy
 	else:
