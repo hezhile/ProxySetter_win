@@ -41,7 +41,7 @@ def read_file(target):
             json.dump(default_proxy, file_handle)
         return default_proxy
     else:
-        with open(target, 'r') as file_handle:
+        with open(target, 'rb') as file_handle:
             file_handle.seek(0)
             config_str = json.load(file_handle)
         return config_str
@@ -101,7 +101,7 @@ mainframe.grid(column=0, row=0, sticky=(E, W))
 mainframe.columnconfigure(0, weight=1)
 mainframe.rowconfigure(0, weight=1)
 
-str_warning = "请先关闭Internet Explorer！"
+str_warning = "修改设置前，请先关闭Internet Explorer！"
 str_addr_port = "状态  IP地址:端口"
 str_status = "启用状态："
 

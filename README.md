@@ -12,5 +12,5 @@ A GUI tool written in Python 3 to quickly modify the Windows system HTTP proxy s
 
 ### 用法
 1. 将常用的配置写入配置文件
-2. 运行，按数字键选择配置方案
+2. 运行，选择配置方案
 
